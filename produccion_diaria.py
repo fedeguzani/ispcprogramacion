@@ -4,8 +4,8 @@ class ProduccionDiaria:
         self.conexion = conexion
 
     def insertar_produccion(self, fecha, cantidad):
-        query = "INSERT INTO produccion_diaria (fecha, cantidad) VALUES ( %s, %s)"
-        params = (fecha, cantidad)
+        query = "INSERT INTO produccion_diaria ( fecha, cantidad) VALUES ( %s, %s)"
+        params = ( fecha, cantidad)
         return self.conexion.ejecutar_consulta(query, params)
 
     def editar_produccion(self, id, fecha, cantidad):
@@ -24,5 +24,6 @@ class ProduccionDiaria:
 
     def cerrar_conexion(self):
         self.conexion.cerrar_conexion()
+    
     
     
