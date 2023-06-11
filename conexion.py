@@ -7,7 +7,7 @@ class Conexion:
             port=33065,
             user='root',
             password='',
-            database='big_bread_sa'
+            database='big_bread_s'
         )
         self.cursor = self.conn.cursor()
 
@@ -37,7 +37,6 @@ class Conexion:
         except mysql.connector.Error as e:
             print(f"Error en la consulta: {e}")
             return []
-
 
 
 
