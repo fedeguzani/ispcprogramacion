@@ -26,4 +26,3 @@ class ProduccionDiaria:
         self.conexion.cerrar_conexion()
     
     
-    
