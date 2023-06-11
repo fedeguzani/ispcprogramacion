@@ -4,9 +4,9 @@ class Recetas:
     def __init__(self, conexion):
         self.conexion = conexion
 
-    def insertar_receta(self, id, producto_id, insumo_id, cantidad):
-        query = "INSERT INTO recetas (id, producto_id, insumo_id, cantidad) VALUES (%s, %s, %s, %s)"
-        params = (id, producto_id, insumo_id, cantidad)
+    def insertar_receta(self, producto_id, insumo_id, cantidad):
+        query = "INSERT INTO recetas ( producto_id, insumo_id, cantidad) VALUES (%s, %s, %s, %s)"
+        params = ( producto_id, insumo_id, cantidad)
         return self.conexion.ejecutar_consulta(query, params)
 
     def editar_receta(self, id, producto_id, insumo_id, cantidad):
